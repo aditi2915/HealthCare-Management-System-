@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>PulseCare — Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body class="theme-white">
+  <header class="site-header light">
+    <div class="container nav-wrap">
+      <a href="index.html" class="brand">
+        <div class="logo-red">⩗</div>
+        <div class="brand-text"><strong>PulseCare</strong><span class="muted">Dashboard</span></div>
+      </a>
+      <div style="display:flex;gap:1rem;align-items:center">
+        <div id="sessionInfo" class="muted"></div>
+        <button id="logoutBtn" class="btn btn-outline">Logout</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container dashboard">
+    <div class="dash-shell">
+      <aside class="dash-sidebar">
+        <h3 style="margin-top:0">Modules</h3>
+        <div id="dashNav" class="dash-nav"></div>
+      </aside>
+
+      <section id="dashMain" class="dash-main">
+        <!-- injected -->
+      </section>
+    </div>
+  </main>
+
+  <script src="doctors.js"></script>
+  <script src="medicines.js"></script>
+  <script src="dashboard.js"></script>
+</body>
+</html>

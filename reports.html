@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>Reports</title><link rel="stylesheet" href="style.css"></head>
+<body>
+  <header class="site-header light"><div class="container nav-wrap"><a href="index.html" class="brand"><div class="logo-red">⩗</div><div class="brand-text"><strong>PulseCare</strong><span class="muted">Reports</span></div></a></div></header>
+  <main class="container section">
+    <h1 class="section-title">Reports</h1>
+    <form id="rep-form" class="form glass">
+      <label>Patient Name<input id="rep-patient" required></label>
+      <label>Doctor Name<input id="rep-doctor" required></label>
+      <label>Notes<textarea id="rep-notes"></textarea></label>
+      <div class="form-actions"><button class="btn btn-red" type="submit">Save Report</button><button id="export-reports-xlsx" class="btn btn-outline" type="button">Export All (Excel)</button></div>
+    </form>
+
+    <h2>History</h2>
+    <div class="table-wrap"><table class="table" id="reports-table"><thead><tr><th>ID</th><th>Patient</th><th>Doctor</th><th>Date</th><th>Actions</th></tr></thead><tbody></tbody></table></div>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+  <script src="reports.js"></script>
+</body>
+</html>

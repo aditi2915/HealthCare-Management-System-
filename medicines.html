@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>PulseCare — Medicines</title><link rel="stylesheet" href="style.css"></head>
+<body>
+  <header class="site-header light"><div class="container nav-wrap"><a href="index.html" class="brand"><div class="logo-red">⩗</div><div class="brand-text"><strong>PulseCare</strong><span class="muted">Medicines</span></div></a></div></header>
+
+  <main class="container section">
+    <h1 class="section-title">Medicines</h1>
+    <div style="display:flex;gap:.6rem;margin-bottom:1rem">
+      <input id="med-search" placeholder="Search medicines by name or category" style="flex:1;padding:.6rem;border-radius:8px;border:1px solid #eee"/>
+      <select id="med-filter-cat" style="padding:.6rem;border-radius:8px;border:1px solid #eee"><option value="">All Categories</option></select>
+    </div>
+
+    <div id="med-list" class="cards-grid"></div>
+  </main>
+
+  <div id="viewModal" class="modal" style="display:none"><div class="modal-content"><button class="modal-close">&times;</button><div id="view-modal-body"></div></div></div>
+
+  <script src="medicines.js"></script>
+  <script src="modal.js"></script>
+</body>
+</html>

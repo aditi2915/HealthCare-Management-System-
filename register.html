@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Register — Medix</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="index.html">🏥 Medix</a>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="doctors.html">Find Doctors</a>
+      <a href="appointments.html">Appointments</a>
+      <a href="records.html">Records</a>
+      <a href="admin.html">Admin</a>
+      <a class="btn-outline" href="login.html" id="top-login">Login</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container page narrow">
+  <section class="card">
+    <h3>Create Account</h3>
+    <form id="registerForm" class="stack">
+      <input type="text" id="regName" placeholder="Full Name" required />
+      <input type="email" id="regEmail" placeholder="Email" required />
+      <input type="password" id="regPassword" placeholder="Password" required />
+      <select id="regRole" required>
+        <option value="">Select Role</option>
+        <option value="patient">Patient</option>
+        <option value="doctor">Doctor</option>
+      </select>
+      <button type="submit" class="btn">Register</button>
+    </form>
+    <p class="muted">Already have an account? <a href="login.html">Login</a></p>
+  </section>
+</main>
+
+<script src="js/app.js"></script>
+</body>
+</html>

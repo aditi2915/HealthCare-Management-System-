@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ambulance - PulseCare</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="index.html" class="brand">
+        <div class="logo-red">⩗</div>
+        <div class="brand-text"><strong>PulseCare</strong><span class="muted">Ambulance</span></div>
+      </a>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="appointments.html">Appointments</a>
+        <a href="doctors.html">Doctors</a>
+        <a href="medicines.html">Medicines</a>
+        <a href="reports.html">Reports</a>
+        <a href="billing.html">Billing</a>
+        <a href="ambulances.html" class="active">Ambulance</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container section">
+    <h2 class="section-title">Available Ambulances</h2>
+    <div id="ambulance-list" class="grid"></div>
+
+    <div class="pagination">
+      <button id="prevPage" class="btn btn-outline">Back</button>
+      <span id="pageInfo"></span>
+      <button id="nextPage" class="btn btn-outline">Next</button>
+    </div>
+  </main>
+
+  <div id="ambulanceModal" class="modal">
+    <div class="modal-content">
+      <span id="closeAmbModal" class="close">&times;</span>
+      <h3 id="modalAmbName"></h3>
+      <p><strong>Type:</strong> <span id="modalAmbType"></span></p>
+      <p><strong>Driver:</strong> <span id="modalAmbDriver"></span></p>
+      <p><strong>Contact:</strong> <span id="modalAmbContact"></span></p>
+      <p><strong>Location:</strong> <span id="modalAmbLocation"></span></p>
+
+      <h4>Available Slots</h4>
+      <div id="ambSlotDates" class="slot-dates"></div>
+      <div id="ambSlotTimes" class="slot-times"></div>
+    </div>
+  </div>
+
+  <script src="ambulances.js"></script>
+</body>
+</html>

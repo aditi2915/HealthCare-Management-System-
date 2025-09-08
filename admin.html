@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Admin Dashboard — Medix</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="index.html">🏥 Medix</a>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="doctors.html">Find Doctors</a>
+      <a href="appointments.html">Appointments</a>
+      <a href="records.html">Records</a>
+      <a href="admin.html" class="active">Admin</a>
+      <a class="btn-outline" href="login.html" id="top-login">Login</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container page">
+  <section class="card">
+    <h3>All Users</h3>
+    <ul id="userList"></ul>
+  </section>
+
+  <section class="card">
+    <h3>All Appointments</h3>
+    <ul id="adminAppointments"></ul>
+  </section>
+</main>
+
+<script src="js/app.js"></script>
+</body>
+</html>

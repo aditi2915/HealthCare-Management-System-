@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>PulseCare — Doctors</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body class="theme-white">
+
+  <header class="site-header light">
+    <div class="container nav-wrap">
+      <a href="index.html" class="brand">
+        <div class="logo-red">⩗</div>
+        <div class="brand-text">
+          <strong>PulseCare</strong>
+          <span class="muted">Telehealth & eHospital Suite</span>
+        </div>
+      </a>
+
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="appointments.html">Appointments</a>
+        <a href="doctors.html">Doctors</a>
+        <a href="medicines.html">Medicines</a>
+        <a href="reports.html">Reports</a>
+        <a href="billing.html">Billing</a>
+        <a href="ambulances.html">Ambulance</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container section">
+    <h1 class="head-xl">Doctors Directory</h1>
+
+    <div class="filters" style="display:flex;gap:1rem;margin-bottom:1rem;">
+      <input id="doc-search" type="text" placeholder="Search by name, specialty, hospital..." style="flex:1;">
+      <select id="doc-filter-specialty">
+        <option value="">All Specialties</option>
+      </select>
+    </div>
+
+    <div id="doctors-grid" class="grid"></div>
+
+    <div id="pagination" style="margin-top:1rem;"></div>
+    <div style="margin-top:.5rem">
+      <button id="prevPage" class="btn btn-outline">Previous</button>
+      <button id="nextPage" class="btn btn-outline">Next</button>
+    </div>
+  </main>
+
+  <div id="viewModal" class="modal hidden">
+    <div class="modal-content">
+      <button class="modal-close">&times;</button>
+      <div id="view-modal-body"></div>
+    </div>
+  </div>
+
+  <div id="toast" class="toast"></div>
+
+  <script src="doctors.js"></script>
+</body>
+</html>

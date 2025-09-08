@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>Appointments — PulseCare</title><link rel="stylesheet" href="style.css"></head>
+<body>
+  <header class="site-header light"><div class="container nav-wrap"><a href="index.html" class="brand"><div class="logo-red">⩗</div><div class="brand-text"><strong>PulseCare</strong><span class="muted">Appointments</span></div></a></div></header>
+  <main class="container section">
+    <h1 class="section-title">Appointments</h1>
+    <form id="ap-form" class="form glass">
+      <label>Patient Name<input id="ap-name" required></label>
+      <label>Doctor<select id="ap-doctor" required></select></label>
+      <label>Date & Time<input id="ap-datetime" type="datetime-local" required></label>
+      <div class="form-actions"><button class="btn btn-red" type="submit">Book Appointment</button></div>
+    </form>
+
+    <h2>Appointment History</h2>
+    <div class="table-wrap"><table class="table" id="ap-table"><thead><tr><th>ID</th><th>Patient</th><th>Doctor</th><th>Date</th><th>Status</th></tr></thead><tbody></tbody></table></div>
+  </main>
+
+  <audio id="appt-sound" src="https://actions.google.com/sounds/v1/alarms/beep_short.ogg" preload="auto"></audio>
+  <script src="appointments.js"></script>
+</body>
+</html>

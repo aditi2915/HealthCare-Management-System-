@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>PulseCare — Telehealth & Clinic Suite</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body class="theme-white">
+
+  <header class="site-header light">
+    <div class="container nav-wrap">
+      <a href="index.html" class="brand">
+        <div class="logo-red">⩗</div>
+        <div class="brand-text">
+          <strong>PulseCare</strong>
+          <span class="muted">Telehealth & eHospital Suite</span>
+        </div>
+      </a>
+
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="appointments.html">Appointments</a>
+        <a href="doctors.html">Doctors</a>
+        <a href="medicines.html">Medicines</a>
+        <a href="reports.html">Reports</a>
+        <a href="billing.html">Billing</a>
+        <a href="ambulances.html">Ambulance</a>
+      </nav>
+
+      <div class="dropdown stay-open" id="auth-dropdown">
+        <button class="dropbtn" id="auth-btn"><i class="fa-solid fa-user"></i> <span id="user-label">Login</span> <i class="fa-solid fa-angle-down"></i></button>
+        <div class="dropdown-content dropdown-right" id="auth-menu">
+          <button class="drop-item" data-role="PATIENT">Patient</button>
+          <button class="drop-item" data-role="DOCTOR">Doctor</button>
+          <button class="drop-item" data-role="ADMIN">Admin</button>
+          <div class="divider"></div>
+          <button class="drop-item" id="logout-btn" style="display:none">Logout</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero hero-light">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <h1 class="head-xl">Modern care, <span class="txt-red">delivered fast</span>.</h1>
+          <p class="lead">Appointments, e-prescriptions, ambulance dispatch, billing & clinical workflows — secure, clear, and fast.</p>
+          <div class="hero-actions">
+            <a href="doctors.html" class="btn btn-red">Find a Doctor</a>
+            <a href="appointments.html" class="btn btn-outline">Book Appointment</a>
+          </div>
+          <ul class="hero-points">
+            <li><i class="fa-solid fa-video"></i> Video consultations</li>
+            <li><i class="fa-solid fa-calendar-check"></i> Smart reminders & alerts</li>
+            <li><i class="fa-solid fa-file-medical"></i> Downloadable reports</li>
+            <li><i class="fa-solid fa-ambulance"></i> Live ambulance fleet</li>
+          </ul>
+        </div>
+
+        <aside class="hero-card glass">
+          <div class="card-header">
+            <strong>Quick Tele-Consult</strong>
+            <span class="muted">Demo flow — demo data</span>
+          </div>
+          <form id="quick-book" class="form">
+            <label>Patient Name
+              <input id="qb-name" type="text" placeholder="Jane Doe" required>
+            </label>
+            <label>Contact (Email / Phone)
+              <input id="qb-contact" type="text" placeholder="jane@example.com / +91 90000 00000" required>
+            </label>
+            <label>Specialty
+              <select id="qb-doctor"></select>
+            </label>
+            <label>Date & Time
+              <input id="qb-datetime" type="datetime-local" required>
+            </label>
+            <div class="form-actions">
+              <button type="submit" class="btn btn-red">Confirm</button>
+              <button type="button" id="qb-cancel" class="btn btn-outline">Cancel</button>
+            </div>
+          </form>
+          <div class="muted">After booking, open Appointments to manage reminders and download receipts.</div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="container section" id="modules">
+      <h2 class="section-title">Explore Modules</h2>
+      <div class="tiles-grid">
+        <article class="tile" data-open="appointments"><div class="tile-icon"><i class="fa-solid fa-calendar-check"></i></div><h3>Appointments</h3><p>Book & manage appointments with slot availability.</p></article>
+        <article class="tile" data-open="doctors"><div class="tile-icon"><i class="fa-solid fa-user-doctor"></i></div><h3>Doctors</h3><p>2000+ generated profiles — click View for details & slots.</p></article>
+        <article class="tile" data-open="medicines"><div class="tile-icon"><i class="fa-solid fa-pills"></i></div><h3>Medicines</h3><p>3000+ medicines — searchable and categorized.</p></article>
+        <article class="tile" data-open="reports"><div class="tile-icon"><i class="fa-solid fa-file-waveform"></i></div><h3>Reports</h3><p>Download PDF, export Excel history.</p></article>
+        <article class="tile" data-open="billing"><div class="tile-icon"><i class="fa-solid fa-cash-register"></i></div><h3>Billing</h3><p>Auto-generated invoices visible to patient/doctor/admin.</p></article>
+        <article class="tile" data-open="ambulances"><div class="tile-icon"><i class="fa-solid fa-truck-medical"></i></div><h3>Ambulance</h3><p>4500+ fleet availability & dispatch management (demo).</p></article>
+      </div>
+      <div class="hint muted">Tip: click any tile — sign in to interact with modules.</div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div>© <span id="year"></span> PulseCare — Demo only</div>
+      <div class="muted">For production, connect to a secure backend and compliance workflows.</div>
+    </div>
+  </footer>
+
+  <div id="viewModal" class="modal hidden">
+    <div class="modal-content">
+      <button class="modal-close">&times;</button>
+      <div id="view-modal-body"></div>
+    </div>
+  </div>
+
+  <div id="toast" class="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

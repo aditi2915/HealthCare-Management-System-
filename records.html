@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Medical Records — Medix</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="index.html">🏥 Medix</a>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="doctors.html">Find Doctors</a>
+      <a href="appointments.html">Appointments</a>
+      <a href="records.html" class="active">Records</a>
+      <a href="admin.html">Admin</a>
+      <a class="btn-outline" href="login.html" id="top-login">Login</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container page">
+  <section class="card">
+    <h3>Upload Medical Record</h3>
+    <form id="recordForm" class="stack">
+      <input type="file" id="recordFile" required />
+      <input type="text" id="recordDesc" placeholder="Description" required />
+      <button type="submit" class="btn">Upload</button>
+    </form>
+  </section>
+
+  <section class="card">
+    <h3>My Records (Auto Refresh)</h3>
+    <ul id="recordList"></ul>
+  </section>
+</main>
+
+<script src="js/app.js"></script>
+</body>
+</html>
